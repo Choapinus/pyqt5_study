@@ -27,8 +27,9 @@ class Notepad(QWidget):
 
 		self.setLayout(v_layout)
 
-		self.clear_btn.clicked.connect(self.clear)
-		self.save_btn.clicked.connect(lambda: self.text.clear())
+		# self.clear_btn.clicked.connect(self.clear)
+		self.clear_btn.clicked.connect(lambda: self.text.clear())
+		self.save_btn.clicked.connect(self.save)
 		self.load_btn.clicked.connect(self.load)
 
 		self.show()
